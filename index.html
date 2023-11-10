@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WareHouse</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body>
+    <div id="title">
+        <img src="Logo.png" alt=""><h1>WAREHOUSE WORKSHOP</h1>
+    </div>
+
+    <div id="plan">
+        <div id="zone">
+            <div id="container"></div>
+        </div>
+        
+        <div id="manipEchelle">
+            <div id="Donnee">
+                <h2 >Current work [Task(T):Robot >> Packet >>Operator</h2>
+                <div id="TravailCourant"></div>
+            </div>
+
+            <div id="manip">
+                <div style="display: flex; flex-direction: column;">
+                    <h2>CONTROL AREA</h2>
+                <div id="grille">
+
+                    <div style="margin: 20px;">
+                        <label for="inputSize" style="font-size: 22px;">Warehouse length: </label>
+                        <input  type="range" id="inputSize" min="10" max="17" step="1" value="1">
+                        <output class="inputSize-output" for="inputSize" style="position: fixed;"></output> 
+                    </div>
+                    <div style="margin: 20px;"><label for="inputFrequency" style="font-size: 22px;">Robot frequency(ms): </label>
+                        <input  type="range" id="inputFrequency" min="500" max="6000" step="100" value="0">
+                        <output class="inputFrequency-output" for="inputFrequency" style="position: fixed;"></output>
+                    </div>
+                    <div style="margin: 20px;"><label for="inputKivas" style="font-size: 22px;">Number of Packages: </label>
+                        <input  type="range" id="inputKivas" min="2" max="17" step="1" value="1">
+                        <output class="inputKivas-output" for="inputKivas" style="position: fixed;"></output>
+                    </div>
+                      <div style="height: 40px;">
+                        <button type="button" id="Click" style="font-size: 25px; width: 300px ; height: 35px;
+                        background-color: rgb(79, 209, 79); font-weight: bold;
+                        border-radius: 12px; box-shadow: 5px 5px 5px orange; margin-top: 10px;">CLICK TO SIMULATE</button>
+                      </div>
+                </div>
+                </div>
+
+                    <div id="vueEchelle">
+                        <h2>THE SCALE</h2>
+                        <div id="echelle">
+                            <div style="display:flex;flex-direction: row; font-size: 25px; justify-content: center; align-items: center;">Robot desactivated:<div id="RF"></div></div>
+                            <div style="display:flex;flex-direction: row; font-size: 25px;justify-content: center; align-items: center;">Robot activated:<div id="RB"></div></div>
+                            <div style="display:flex;flex-direction: row; font-size: 25px;justify-content: center; align-items: center;">Packet:<div id="P"></div></div>
+                            <div style="display:flex;flex-direction: row; font-size: 25px;justify-content: center; align-items: center;">Point de collision:<div id="C"></div></div>
+                            <div style="display:flex;flex-direction: row; font-size: 25px;justify-content: center; align-items: center;">Operator:<div id="O"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js" defer type="module"></script>
+    <script src="touche.js"></script>
+</body>
+</html>
